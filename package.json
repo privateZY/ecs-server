@@ -1,0 +1,16 @@
+{
+ "dependencies": {
+  "@types/koa": "^2.0.44",
+  "@types/koa-session": "^5.7.1",
+  "koa": "^2.5.0",
+  "koa-router": "^7.4.0",
+  "koa-session": "^5.8.1"
+ },
+ "scripts": {
+  "dev": "backpack",
+  "build": "backpack build"
+ },
+ "devDependencies": {
+  "backpack-core": "^0.5.0"
+ }
+}
