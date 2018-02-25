@@ -1,43 +1,32 @@
 import passport from "koa-passport";
-import LocalStrategy from "passport-local";
-import config from "../../config/base";
 
-const users = [{
-    id: 1,
-    name: "aaa",
-    password: "123456"
-}, {
-    id: 2,
-    name: "bbb",
-    password: "123456"
-}];
+export default app => {
+  const getUser = id => {
+    const User = app.db.models["User"];
 
-const getUser = (id) => {
-    return new Promise((resolve, reject) => {
-        let u = users.find(u => u.id === id);
-        u ? resolve(u) : reject()
-    })
-};
+    return User.findOne({
+      where: {
+        username: id
+      }
+    });
+  };
 
-passport.serializeUser(function (user, done) {
+  passport.serializeUser(function(user, done) {
     done(null, user.id);
-});
+  });
 
-passport.deserializeUser(async (id, done) => {
+  passport.deserializeUser(async (id, done) => {
     try {
-        const user = await getUser(id);
+      const user = await getUser(id);
+      if (user) {
         done(null, user);
+      } else {
+        done(null, false);
+      }
     } catch (err) {
-        done(err);
+      done(err);
     }
-});
+  });
 
-passport.use(new LocalStrategy(function (username, password, done) {
-    let u = users.find(u => u.name === username && u.password === password);
-    if (u) {
-        done(null, u)
-    } else {
-        done(null, false)
-    }
-}));
-export default passport;
+  return passport;
+};

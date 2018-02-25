@@ -1,0 +1,18 @@
+{
+  "port": 4567,
+  "keys": ["PRIVATE_YZ"],
+  "sessionKey": "PRIVATE_YZ:sess",
+  "db": {
+    "databaseName": "ecs_prod_db",
+    "username": "ecs-admin",
+    "password": "520ypf",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  }
+}

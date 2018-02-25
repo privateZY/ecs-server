@@ -62,4 +62,5 @@ typings/
 
 # prod config file
 config/prodConfig.json
+config/serverConfig.json
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="53f6df8b-b709-4524-ac89-bb9d95ea4d1a" name="ecs-server" url="http://120.26.82.73">
+        <fileTransfer host="120.26.82.73" port="22" rootFolder="/usr/web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
