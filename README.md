@@ -9,8 +9,9 @@ Ali Ecs Server Api repo
     yarn install 
 ```
 
-***修改配置***
-依照`./config/config.example.json` 的格式创建 `serverConfig.json` 以及 `prodConfig.json`, 并且修改其中配置参数
+**修改配置**
+
+依照 `./config/config.example.json` 的格式创建 `serverConfig.json` 以及 `prodConfig.json`, 并且修改其中配置参数
 
 **配置(Config)**
 
@@ -24,7 +25,7 @@ Ali Ecs Server Api repo
 |db.password                    | 密码
 |db.host                        | 地址
 |db.port                        | 端口
-|db.dialect                     | 数据库类型, `mysql 、 sqlite`
+|db.dialect                     | 数据库类型,当前只支持 `mysql`
 
 然后运行脚本, 初始化数据库
 ```
