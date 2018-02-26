@@ -13,17 +13,18 @@ Ali Ecs Server Api repo
 依照`./config/config.example.json` 的格式创建 `serverConfig.json` 以及 `prodConfig.json`, 并且修改其中配置参数
 
 **配置(Config)**
-参数名称  | 描述
-------------- | -------------
-port  | 服务器端口号
-keys  | Koa keygrip
-sessionKey | session key, 默认  `Koa:sess`
-db.databaseName | 数据库名
-db.username | 账号
-db.password | 密码
-db.host | 地址
-db.port | 端口
-db.dialect | 数据库类型, mysql, sqlite etc.
+
+|参数名称                        |描述
+|-------------------------------|----------------------------------------------------------
+|port                           | 服务器端口号
+|keys                           | Koa keygrip
+|sessionKey                     | session key, 默认  `Koa:sess`
+|db.databaseName                | 数据库名
+|db.username                    | 账号
+|db.password                    | 密码
+|db.host                        | 地址
+|db.port                        | 端口
+|db.dialect                     | 数据库类型, `mysql 、 sqlite`
 
 然后运行脚本, 初始化数据库
 ```
