@@ -85,5 +85,20 @@ export default {
     } catch (e) {
       ctx.throw(400, e);
     }
+  },
+  async checkExist(ctx) {
+    try {
+      const user = await ctx.app.db.models["User"].findOne({
+        where: {
+          username: ctx.query.name
+        }
+      });
+
+      ctx.body = {
+        result: !!user
+      };
+    } catch (e) {
+      ctx.throw(500, e);
+    }
   }
 };
