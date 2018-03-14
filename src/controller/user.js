@@ -51,7 +51,7 @@ export default {
     }
     let hashPwd = null;
     try {
-      hashPwd = await bcrypt.hash(ctx.request.body.password, 10);
+      hashPwd = await bcrypt.hash(password, 10);
     } catch (e) {
       ctx.throw(500);
     }
