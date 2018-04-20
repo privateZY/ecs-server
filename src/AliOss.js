@@ -2,7 +2,12 @@ import OSS from "ali-oss";
 import co from "co";
 export default class AliOss {
     constructor(app) {
-        this.publicStore = new OSS(app.config.oss.public);
+        this.app = app;
+        this.publicStore = new OSS.Wrapper(app.config.oss.public);
+    }
+
+    getPublicConfig() {
+        return this.app.config.oss.public;
     }
 
     async checkFiles() {

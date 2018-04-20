@@ -23,7 +23,8 @@
         "koa2-validation": "^0.1.0",
         "mysql2": "^1.5.2",
         "passport-local": "^1.0.0",
-        "sequelize": "^4.33.4"
+        "sequelize": "^4.33.4",
+        "uuid": "^3.2.1"
     },
     "scripts": {
         "server:forever": "cross-env NODE_ENV=production forever start ./src/index.js",
