@@ -46,6 +46,7 @@ export default {
 
     async create(ctx, next) {
         const { password, username, passwordRepeat } = ctx.request.body;
+
         if (password !== passwordRepeat) {
             ctx.throw(400, "两次密码不一致");
         }

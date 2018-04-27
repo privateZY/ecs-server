@@ -1,0 +1,17 @@
+{
+    "appenders": {
+        "everything": {
+            "type": "stderr"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": ["everything"],
+            "level": "debug"
+        },
+        "http": {
+            "appenders": ["everything"],
+            "level": "debug"
+        }
+    }
+}

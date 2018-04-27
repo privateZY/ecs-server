@@ -5,11 +5,12 @@ export default async function(db) {
 
     if (models["User"]) {
         const pwd = await bcrypt.hash("1", 10);
+        const pin = await bcrypt.hash("1", 10);
         await models["User"].bulkCreate([
             {
                 username: "test",
                 password: pwd,
-                pin: pwd
+                pin: pin
             }
         ]);
     }
