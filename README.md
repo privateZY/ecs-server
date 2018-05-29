@@ -1,4 +1,6 @@
- ecs-server 
+# deprecated: move to gitlab #
+
+ecs-server 
 =============
 
 Ali Ecs Server Api repo
